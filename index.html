@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Навигация</title>
+<link href="style.css" rel="stylesheet" />
+</head>
+<body>
+
+<nav class="gen-nav" id="gen-nav">
+  <div class="gen-logo"><svg width="36px" height="36px" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:block;opacity:0.85;">
+    <rect width="40" height="40" rx="8" fill="rgba(255,255,255,0.22)"/>
+    <polygon points="20,6 24,15 34,16 27,23 29,33 20,28 11,33 13,23 6,16 16,15" fill="rgba(255,255,255,0.9)"/>
+  </svg></div>
+  <button class="gen-hamburger" id="gen-ham" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul id="gen-menu">
+    <li><a href="#">Главная</a></li>
+    <li class="has-sub">
+      <a href="#">Проекты<span class="gen-arrow">▾</span></a>
+      <ul>
+        <li><a href="#">Проект 1</a></li>
+        <li><a href="#">Проект 2</a></li>
+        <li><a href="#">Проект 3</a></li>
+      </ul>
+    </li>
+    <li><a href="#">О нас</a></li>
+    <li class="has-sub">
+      <a href="#">Услуги<span class="gen-arrow">▾</span></a>
+      <ul>
+        <li><a href="#">Услуги 1</a></li>
+        <li><a href="#">Услуги 2</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Контакты</a></li>
+  </ul>
+</nav>
+<div class="cardContainer inactive">
+  <div class="card">
+    <div class="side front">
+      <div class="img img1"></div>
+      <div class="info">
+        <h2>Super S</h2>
+        <p>Автодом с исключительно компактными размерами. Подходит для ограниченного пространства и буксировки прицепа.</p>
+      </div>
+    </div>
+    <div class="side back">
+      <div class="info">
+        <h2>Характеристики</h2>
+        <div class="reviews">
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <defs><path d="M0 0h24v24H0V0z" id="a"/></defs><clipPath id="b"><use overflow="visible" xlink:href="#a"/></clipPath><path clip-path="url(#b)" d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4V6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/>
+          </svg>
+          <p>23 Отзыва</p>
+        </div>
+        <ul>
+          <li>Управляйте воротами заднего двора с легкостью благодаря варианту с шириной платформы 36 дюймов.</li>
+          <li>На ваш выбор предлагаются платформы следующих размеров: 36, 48, 52 и 60 дюймов.</li>
+        </ul>
+        <div class="btn">
+          <h4>Узнать больше</h4>
+          <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cardContainer inactive">
+  <div class="card">
+    <div class="side front">
+      <div class="img img2"></div>
+      <div class="info">
+        <h2>Super Z HyperDrive</h2>
+        <p>Высокопроизводительный снегоход. Прочный и быстрый.</p>
+      </div>
+    </div>
+    <div class="side back">
+      <div class="info">
+        <h2>Характеристики</h2>
+        <div class="reviews">
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <p>39 Отзывов</p>
+        </div>
+        <ul>
+          <li>На ваш выбор предлагаются деки VX4 шириной от 60 до 72 дюймов.</li>
+          <li>37-сильный двигатель Vanguard BigBlock EFI легко справляется с большими задачами, обеспечивая скорость до 16 миль в час.</li>
+        </ul>
+        <div class="btn">
+          <h4>Узнать больше</h4>
+          <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="cardContainer inactive">
+  <div class="card">
+    <div class="side front">
+      <div class="img img3"></div>
+      <div class="info">
+        <h2>Vanguard Power</h2>
+        <p>Если вам нужен надёжный двигатель, который повысит вашу производительность, обратите внимание на Vanguard.</p>
+      </div>
+    </div>
+    <div class="side back">
+      <div class="info">
+        <h2>Характеристики</h2>
+        <div class="reviews">
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <svg fill="#FFC324" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M22 9.24l-7.19-.62L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27 18.18 21l-1.63-7.03L22 9.24zM12 15.4l-3.76 2.27 1-4.28-3.32-2.88 4.38-.38L12 6.1l1.71 4.04 4.38.38-3.32 2.88 1 4.28L12 15.4z"/><path d="M0 0h24v24H0z" fill="none"/></svg>
+          <p>26 Отзывов</p>
+        </div>
+        <ul>
+          <li>Технология  V-Twin OHV обеспечивает превосходную балансировку, низкий уровень вибрации, меньший уровень выбросов, лучшую экономию топлива и более высокое соотношение мощности к весу.</li>
+          <li>Усовершенствованная система управления отходами поддерживает чистоту.</li>
+        </ul>
+        <div class="btn">
+          <h4>Узнать больше</h4>
+          <svg fill="#333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M8.59 16.34l4.58-4.59-4.58-4.59L10 5.75l6 6-6 6z"/><path d="M0-.25h24v24H0z" fill="none"/></svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="slider">
+  <input type="radio" name="slider" id="slide1" checked>
+  <input type="radio" name="slider" id="slide2">
+  <input type="radio" name="slider" id="slide3">
+
+  <div class="slides">
+      <div class="slide"><img src="Slide1.jpg" width="300"></div>
+      <div class="slide"><img src="Slide2.jpg" width="300"></div>
+      <div class="slide"><img src="Slide3.png" width="300"></div>
+  </div>
+
+  <div class="controls">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+      <label for="slide3"></label>
+  </div>
+</div>
+<script src="script.js">
+</script>
+</body>
+</html>

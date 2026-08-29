@@ -1,0 +1,744 @@
+.gen-nav {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(90deg, #6d79a2, #2a3141);
+  min-height: 65px;
+  border-radius: 30px;
+  border: 6px solid #929ebf;
+  box-shadow: 0 6px 17px rgba(0,0,0,.18);
+  padding: 0 16px;
+  position: relative;
+  flex-wrap: wrap;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+ 
+  display: flex;
+}
+.gen-nav *, .gen-nav *::before, .gen-nav *::after {
+  box-sizing: border-box;
+}
+.gen-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.gen-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  margin-right: auto;
+}
+.gen-logo-text {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.gen-hamburger {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  margin-left: auto;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column; gap:0;
+ 
+}
+.gen-hamburger span {
+  display: block;
+  background: #ffffff;
+  transition: all .3s;
+  width:22px; height:2px; border-radius:2px; margin:3px 0;
+}
+
+.gen-nav > ul {
+  display: flex; justify-content:center; flex: 1;
+  flex-wrap: wrap;
+}
+.gen-nav > ul > li {
+  position: relative;
+}
+.gen-nav > ul > li > a {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0 21px;
+  height: 65px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  text-decoration: none;
+  transition: background .2s, color .2s;
+  white-space: nowrap;
+}
+.gen-nav > ul > li > a:hover,
+.gen-nav > ul > li:hover > a {
+  background: #1d4ed8;
+  color: #bfdbfe;
+}
+.gen-arrow { font-size: .7em; opacity: .8; vertical-align: middle; }
+/* Dropdown */
+.gen-nav > ul > li > ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #1e3a8a;
+  min-width: 170px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.18);
+  z-index: 1000;
+  overflow: hidden;
+}
+.gen-nav > ul > li:hover > ul {
+  display: block;
+}
+.gen-nav > ul > li > ul > li > a {
+  display: block;
+  padding: 10px 18px;
+  color: #dbeafe;
+  font-size: 13px;
+  text-decoration: none;
+  transition: background .15s, color .15s;
+}
+.gen-nav > ul > li > ul > li > a:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+}
+.gen-nav > ul > li > ul > li:last-child {
+  border-radius: 0 0 6px 6px;
+  overflow: hidden;
+}
+.gen-nav > ul > li > ul > li:last-child > a {
+  border-radius: 0 0 6px 6px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .gen-hamburger { display: flex; margin-left: 0; }
+  .gen-nav {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .gen-logo { margin-right: auto; margin-left: 0; justify-self: unset; order: -1; }
+  .gen-nav > ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0; right: 0;
+    flex-direction: column;
+    background: linear-gradient(90deg, #6d79a2, #2a3141);
+    border-radius: 0 0 30px 30px;
+    box-shadow: 0 12px 32px rgba(0,0,0,.2);
+    z-index: 9999;
+    padding: 8px 0;
+    overflow: hidden;
+  }
+  .gen-nav > ul.open { display: flex; }
+  /* Remove nav bottom radius when dropdown is open so they flow together */
+  .gen-nav.mobile-open { border-radius: 30px 30px 0 0; }
+  .gen-nav > ul > li > a { height: auto; padding: 14px 20px; }
+  /* Reset desktop last-child rounding — not needed on mobile */
+  .gen-nav > ul > li:last-child { border-radius: 0; overflow: visible; }
+  .gen-nav > ul > li:last-child > a { border-radius: 0; }
+  .gen-nav > ul > li > ul {
+    display: block;
+    position: static;
+    box-shadow: none;
+    border-radius: 0;
+    overflow: visible;
+    background: rgba(0,0,0,.15);
+    min-width: 0;
+  }
+ 
+  /* No rounding on submenu items in mobile */
+  .gen-nav > ul > li > ul > li:last-child { border-radius: 0; overflow: visible; }
+  .gen-nav > ul > li > ul > li:last-child > a { border-radius: 0; }
+  .gen-nav > ul > li > ul > li > a { padding: 10px 32px; }
+  /* Hamburger animates to X when open */
+ 
+  .gen-nav.mobile-open .gen-hamburger span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .gen-nav.mobile-open .gen-hamburger span:nth-child(2) { opacity: 0; }
+  .gen-nav.mobile-open .gen-hamburger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+ 
+}
+
+
+/* =========================
+ Global styles
+ ========================= */
+
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/* =========================
+ Text
+ ========================= */
+
+
+h2,
+h4,
+p,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+
+h2,
+h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  color: #333333;
+}
+
+
+h2 {
+  font-size: 27px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-bottom: 10px;
+}
+
+
+p,
+li {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: #555555;
+  line-height: 22px;
+}
+
+
+ul,
+li {
+  text-decoration: none;
+  list-style: disc outside;
+}
+
+
+ul {
+  padding-left: 20px;
+}
+
+
+svg {
+  margin: 0;
+  min-width: 24px;
+  min-height: 24px;
+}
+
+
+
+
+/* =========================
+ Main
+ ========================= */
+
+
+body {
+  background-color: #dedfe2;
+  background-image: linear-gradient(140deg, #ffffff, #dedfe2);
+
+
+  margin: 0;
+  width: 100%;
+  min-height: 100vh;
+
+
+  text-align: center;
+}
+
+
+
+
+
+
+/* Навигация */
+.gen-nav {
+  width: 100%;
+}
+
+
+
+
+/* Карточки */
+.cardContainer { position: relative; width: 300px; height: 400px; min-width: 300px; min-height: 400px; margin: 20px 10px; perspective: 1000px; display: inline-block; vertical-align: top; text-align: left; } 
+
+
+
+
+
+
+
+
+/* =========================
+ Card container
+ ========================= */
+
+
+.cardContainer {
+  position: relative;
+
+
+  width: 300px;
+  height: 400px;
+
+
+  min-width: 300px;
+  min-height: 400px;
+
+
+  margin: 4px;
+
+
+  perspective: 1000px;
+}
+
+
+
+
+/* =========================
+ Card
+ ========================= */
+
+
+.card {
+  position: relative;
+
+
+  display: inline-block;
+
+
+  width: 100%;
+  height: 100%;
+
+
+  cursor: pointer;
+
+
+  transform-style: preserve-3d;
+
+
+  transform: rotateY(0deg);
+
+
+  transition:
+      transform 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+
+
+
+/* Card flip */
+
+
+.card.active {
+  transform: rotateY(180deg);
+}
+
+
+
+
+/* Shadow */
+
+
+.card::after {
+  content: "";
+
+
+  position: absolute;
+
+
+  z-index: -1;
+
+
+  width: 100%;
+  height: 100%;
+
+
+  top: 0;
+  left: 0;
+
+
+  border-radius: 5px;
+
+
+  box-shadow: 0 14px 50px -4px rgba(0, 0, 0, 0.15);
+
+
+  opacity: 0;
+
+
+  transition: opacity 0.6s ease;
+}
+
+
+.card:hover::after {
+  opacity: 1;
+}
+
+
+
+
+/* =========================
+ Card sides
+ ========================= */
+
+
+.card .side {
+  position: absolute;
+
+
+  width: 100%;
+  height: 100%;
+
+
+  top: 0;
+  left: 0;
+
+
+  border-radius: 5px;
+
+
+  background-color: #ffffff;
+
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+.card .front {
+  z-index: 2;
+}
+
+
+.card .back {
+  transform: rotateY(180deg);
+}
+
+
+
+
+/* =========================
+ Card information
+ ========================= */
+
+
+.card .info {
+  padding: 16px;
+}
+
+
+
+
+/* =========================
+ Front
+ ========================= */
+
+
+.front .img {
+  width: 100%;
+  height: 250px;
+
+
+  background-color: #dedfe2;
+
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+
+  border-radius: 5px 5px 0 0;
+}
+
+
+
+
+/* Product images */
+
+
+.front .img1 {
+  background-image: url("https://i.imgur.com/1aE1nMA.jpg");
+}
+
+
+.front .img2 {
+  background-image: url("https://i.imgur.com/2p9VXAn.jpg");
+}
+
+
+.front .img3 {
+  background-image: url("https://i.imgur.com/I5ABT2v.jpg");
+}
+
+
+
+
+/* =========================
+ Back
+ ========================= */
+
+
+.back {
+  position: relative;
+}
+
+
+.back h2 {
+  margin-top: 6px;
+  margin-bottom: 18px;
+}
+
+
+
+
+/* =========================
+ Reviews
+ ========================= */
+
+
+.back .reviews {
+  display: flex;
+
+
+  align-items: center;
+
+
+  margin-bottom: 12px;
+
+
+  cursor: pointer;
+}
+
+
+.back .reviews p {
+  color: #c4c4c4;
+
+
+  font-weight: 300;
+
+
+  margin: 1px 0 0 6px;
+
+
+  transition: color 0.3s ease;
+}
+
+
+.back .reviews:hover p {
+  color: #555555;
+}
+
+
+
+
+/* =========================
+ Features list
+ ========================= */
+
+
+.back li {
+  line-height: 22px;
+
+
+  margin: 2px 0 6px 0;
+}
+
+
+
+
+/* =========================
+ Button
+ ========================= */
+
+
+.back .btn {
+  position: absolute;
+
+
+  left: 16px;
+  bottom: 16px;
+
+
+  width: calc(100% - 32px);
+  height: 56px;
+
+
+  display: flex;
+
+
+  align-items: center;
+  justify-content: center;
+
+
+  background-color: #ffc324;
+
+
+  background-image:
+      linear-gradient(-90deg, #ffb714, #ffe579);
+
+
+  border-radius: 5px;
+
+
+  cursor: pointer;
+}
+
+
+
+
+/* Button hover */
+
+
+.back .btn:hover h4 {
+  transform: translateX(0);
+}
+
+
+.back .btn:hover svg {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
+
+
+/* Button text */
+
+
+.back .btn h4 {
+  transform: translateX(12px);
+
+
+  transition: transform 0.3s ease-out;
+}
+
+
+
+
+/* Button arrow */
+
+
+.back .btn svg {
+  margin: 1px 0 0 4px;
+
+
+  transform: translateX(-8px);
+
+
+  opacity: 0;
+
+
+  transition:
+      transform 0.3s ease-out,
+      opacity 0.3s ease-out;
+}
+
+
+
+
+/* =========================
+ Responsive
+ ========================= */
+
+
+@media (max-width: 1000px) {
+  body {
+      padding: 30px 10px;
+  }
+
+
+  .cardContainer {
+      margin: 15px 8px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  body {
+      padding: 20px 10px;
+  }
+
+
+  .cardContainer {
+      width: 300px;
+      height: 400px;
+      margin: 15px auto;
+  }
+}
+
+
+
+
+.slider {
+width: 300px; /* Фиксированная ширина */
+overflow: hidden; /* Скрываем выходящие за границы изображения */
+position: relative;
+}
+
+
+/* Контейнер, в котором будут находиться все слайды */
+.slides {
+display: flex; /* Располагаем слайды в ряд */
+width: 300%; /* Делаем ширину в три раза больше (по количеству слайдов) */
+transition: transform 0.5s ease-in-out; /* Плавное переключение слайдов */
+}
+
+
+/* Каждый отдельный слайд */
+.slide {
+width: 100%; /* Каждый слайд занимает всю ширину контейнера */
+flex-shrink: 0; /* Запрещаем уменьшение элементов внутри flex-контейнера */
+}
+
+
+/* Убираем отображение радиокнопок, они нужны только для управления */
+input[type="radio"] {
+display: none;
+}
+
+
+/* Переключение слайдов при выборе радиокнопки */
+#slide1:checked ~ .slides { transform: translateX(0%); }   /* Первый слайд */
+#slide2:checked ~ .slides { transform: translateX(-100%); } /* Второй слайд */
+#slide3:checked ~ .slides { transform: translateX(-200%); } /* Третий слайд */
+
+
+/* Контейнер для точек управления (индикаторов) */
+.controls {
+text-align: center; /* Размещаем точки по центру */
+margin-top: 10px; /* Добавляем отступ сверху */
+}
+
+
+/* Стиль для точек переключения */
+.controls label {
+display: inline-block; /* Размещаем точки в строку */
+width: 15px; /* Размер точки */
+height: 15px;
+background: gray; /* Серый цвет точки */
+border-radius: 50%; /* Делаем точки круглыми */
+margin: 5px; /* Добавляем небольшой отступ между ними */
+cursor: pointer; /* Делаем курсор в виде руки при наведении */
+}
+
+
+/* Меняем цвет активной точки при выборе слайда */
+input:checked + label {
+background: black;
+}
+
+
